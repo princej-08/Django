@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img{
+            width: auto;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    {% for prd in products %}
+        <!-- <img src="{{prd.image.url}}" alt=""> -->
+        <a href="{% url 'product' prd.prdId %}">
+            <h3>{{prd.prdname}}</h3>
+        </a>
+       
+
+    {% endfor %}
+</body>
+</html>

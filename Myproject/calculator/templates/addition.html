@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Calculater</title>
+    </head>
+    <body>
+        <form action="" method="POST">
+            {% csrf_token%}
+            First Number : <input type="text" name = 'num1'> <br><br>
+            Second Number : <input type="text" name = 'num2'> <br> <br>
+            <input type="submit" name = "add" value = "Addition">
+            <input type="submit" name = "sub" value = "Subsraction">
+            <input type="submit" name = "div" value = "Division">
+            <input type="submit" name = "mul" value = "Multiplication">  
+            <style>
+                body{
+                    background-color: rgba(0, 255, 229, 0.523);
+                }
+            </style>
+        </form>
+        <p><h1> {{name}} </h1></p>
+        <style>
+            body{
+                color: rgb(155, 24, 178);
+            }
+        </style>
+        <p><h1> {{value}} </h1></p>
+
+        {% if value > 20 %}
+        <h2>value is big</h2>
+        {% else %}
+        <h2>value is small</h2>
+        {% endif %}
+
+        {% for i in listvalues %}
+        <h4>{{i}}</h4>
+        {% endfor %}
+    </body>
+</html>

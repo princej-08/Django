@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="signup" method = "POST">
+        {% csrf_token %}
+        {# {{signupform.as_p}} #}
+        {{signupform.username.label}} {{signupform.username}} <br><br>
+        {{signupform.password1.label}} {{signupform.password1}} <br><br>
+        {{signupform.password2.label}} {{signupform.password2}} <br><br>
+        {{signupform.email.label}} {{signupform.email}} <br><br>
+        {{signupform.is_staff.label}} {{signupform.is_staff}} <br><br>
+        <input type="Submit" value="Create">
+    </form>
+
+    {% for msg in messages%}
+    {{msg}}
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+
+{% block main %}
+        <center>
+            <a href="{% url 'home' %}">Back</a>
+            <form action="" method="POST">
+                {% csrf_token %}
+                Employee Number <input type="text" name = 'emp_no'> <br>
+                Employee Name <input type="text" name = 'emp_name'> <br>
+                Employee salary <input type="text" name = 'emp_salary'> <br>
+                Employee Address <input type="text" name = 'emp_address'> <br>
+                Employee Dept <input type="text" name = 'dept_no'> <br><br>
+                <input type="Submit" value = "Save">
+            </form>
+        </center>
+
+{% endblock %}
+    </body>
+</html>

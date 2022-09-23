@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Math Table</title>
+    </head>
+    <body>
+        <style>
+            body{
+                background-color: black;
+            }
+        </style>
+        <form action="" method='POST'>
+            {% csrf_token%}
+            <style>
+                body{
+                    color: salmon;
+                }
+            </style>
+            <h3 style="font-family: 'Gill Sans';">Enter a Number: <input type="text" name ="num"></h3>
+            <h3><button>Press</button></h3>
+        </form>
+        
+        {% for i in output %}
+        <h3><p>{{i}}</p></h3>
+        {% endfor %}
+        
+    
+    </body>    
+
+</html>

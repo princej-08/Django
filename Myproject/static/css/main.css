@@ -1,0 +1,7 @@
+ul,li{
+    display: inline;
+    padding: 10px;
+}
+nav{
+    background-color: aqua;
+};

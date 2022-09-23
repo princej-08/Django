@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block main %}
+       <center>
+        <body>
+            <a href="{% url 'home' %}">Back</a>
+            <form action="" method="POST">
+                {% csrf_token %}
+                Enter employee number <input type="text" name = "emp_no"> <br><br>
+                <input type="Submit">
+            </form>
+            
+        </body>
+        
+
+            {% for row in empinfo %}
+                {{row.1}} {{row.2}} {{row.3}} {{row.4}}
+            {% endfor %}
+        </center>
+
+{% endblock %}

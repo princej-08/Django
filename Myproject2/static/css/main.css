@@ -1,0 +1,11 @@
+body{
+    background-color: darksalmon;
+}
+ul,li{
+    display: inline;
+    padding: 10px;
+}
+nav{
+    background-color: aqua;
+    
+};

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<center>
+    <a href="{% url 'select' %}">Normal select</a><br><br>
+    <a href="{% url 'insert' %}">Normal insert</a><br><br>
+    <a href="{% url 'ormselect' %}">ORM select</a><br><br>
+    <a href="{% url 'orminsert' %}">ORM insert</a><br><br>
+    
+</center>
+{% endblock %}
