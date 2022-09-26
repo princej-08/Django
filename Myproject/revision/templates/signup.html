@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="signup" method = "POST">
+    <form action="" method = "POST">
         {% csrf_token %}
         {# {{signupform.as_p}} #}
         {{signupform.username.label}} {{signupform.username}} <br><br>
